@@ -6,6 +6,10 @@ class getPostDataService {
         return http.get('/posts')
     }
 
+    getPostId(id): Promise<any> {
+        return http.get('/posts/' + id )
+    }
+
     getUsers(): Promise<any> {
         return http.get('/users')
     }

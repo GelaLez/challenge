@@ -2,10 +2,15 @@
 import { defineComponent } from 'vue'
 import MiComponentePostList from './components/postList.vue'
 
+
 export default defineComponent({
   name: 'app',  
+  created() {
+    // this.emitter.on('close', (evt) => {    
+    // })
+  },
   components: {
-    MiComponentePostList
+    MiComponentePostList,    
   }
 })
 </script>
@@ -17,9 +22,9 @@ export default defineComponent({
       VUE FRAMEWORK
     </div>
   </header>
-  <div class="row tarjeta">   
+  <div class="row tarjeta">
     <h2>Lista de posts</h2>
-    <MiComponentePostList/>
+    <MiComponentePostList/>    
   </div>
 </template>
 
