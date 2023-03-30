@@ -1,4 +1,4 @@
 # challenge
 challenge
-npm install \n
+npm install 
 npm run dev
