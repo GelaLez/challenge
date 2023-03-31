@@ -1,4 +1,4 @@
-<template>
+<template>    
     Total de elementos: {{ totalList }}
 
     <RouterLink :to="{ path: '/post/' + post.userId }" v-for="post in arrayPosts" @click="viewItem(post)"
@@ -15,15 +15,14 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">{{postItem.title}}</h5>
+                    <h5 class="modal-title" id="staticBackdropLabel">{{ postItem.title }}</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    {{ postItem.body }}                    
-                    <componentPostDetails postId="postItem.id"></componentPostDetails>
+                    {{ postItem.body }}
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Aceptar</button>                    
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Aceptar</button>
                 </div>
             </div>
         </div>
@@ -37,7 +36,7 @@ import getPostDataService from '../services/postAPI'
 import { ResponseType } from '../types/responseType.interface'
 import { usersType } from './types/usersTypes.interface'
 import Modal from './modal.vue'
-import componentPostDetails from '../components/postDetails.vue'
+
 
 export default {
 
@@ -55,7 +54,7 @@ export default {
             return this.arrayPosts.length
         }
     },
-    components: { Modal , componentPostDetails },
+    components: { Modal },
     methods: {
         viewItem(item) {
             console.log(item.id)
@@ -104,9 +103,9 @@ export default {
 
 <style>
 .modal-title {
-	margin-bottom: 0;
-	line-height: 1.5;
-	color: black;
+    margin-bottom: 0;
+    line-height: 1.5;
+    color: black;
 }
 
 .modal-body {
